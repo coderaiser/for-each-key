@@ -1,0 +1,48 @@
+{
+  "name": "for-each-key",
+  "version": "1.0.0",
+  "description": "call a function with key and value for each object property",
+  "main": "lib/for-each-key.js",
+  "scripts": {
+    "test": "tape test/*.js",
+    "coverage": "nyc npm test",
+    "lint": "eslint lib test",
+    "build": "redrun clean 6to5 legacy:* build:*",
+    "6to5": "babel -d legacy/lib lib",
+    "clean": "rimraf dist/* legacy/*",
+    "watcher": "nodemon -w test -w lib --exec",
+    "watch:test": "npm run watcher -- npm test",
+    "watch:lint": "npm run watcher -- 'npm run lint'",
+    "watch:tape": "nodemon -w test -w lib --exec tape",
+    "watch:coverage": "npm run watcher -- nyc tape",
+    "legacy:index": "echo \"module.exports = require('./lib/for-each-key');\" > legacy/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coderaiser/for-each-key.git"
+  },
+  "keywords": [
+    "for",
+    "each",
+    "key"
+  ],
+  "author": "coderaiser <mnemonic.enemy@gmail.com> (http://coderaiser.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coderaiser/for-each-key/issues"
+  },
+  "homepage": "https://github.com/coderaiser/for-each-key",
+  "devDependencies": {
+    "babel-cli": "^6.1.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.0.0",
+    "nodemon": "^1.11.0",
+    "nyc": "^11.0.2",
+    "redrun": "^6.0.0",
+    "rimraf": "^2.4.3",
+    "sinon": "^4.5.0",
+    "sinon-called-with-diff": "^2.0.0",
+    "tape": "^4.2.0"
+  }
+}
