@@ -6,6 +6,7 @@
   "scripts": {
     "test": "tape test/*.js",
     "coverage": "nyc npm test",
+    "report": "nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint lib test",
     "build": "redrun clean 6to5 legacy:* build:*",
     "6to5": "babel -d legacy/lib lib",
@@ -36,6 +37,7 @@
     "babel-cli": "^6.1.1",
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.6.1",
+    "coveralls": "^3.0.0",
     "eslint": "^4.0.0",
     "nodemon": "^1.11.0",
     "nyc": "^11.0.2",
