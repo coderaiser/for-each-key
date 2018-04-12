@@ -1,6 +1,6 @@
 {
   "name": "for-each-key",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "call a function with key and value for each object property",
   "main": "lib/for-each-key.js",
   "scripts": {
