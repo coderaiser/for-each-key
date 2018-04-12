@@ -8,7 +8,7 @@
     "coverage": "nyc npm test",
     "report": "nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint lib test",
-    "build": "redrun clean 6to5 legacy:* build:*",
+    "build": "redrun clean 6to5 legacy:*",
     "6to5": "babel -d legacy/lib lib",
     "clean": "rimraf dist/* legacy/*",
     "watcher": "nodemon -w test -w lib --exec",
