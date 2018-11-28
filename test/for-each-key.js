@@ -1,8 +1,7 @@
 'use strict';
 
 const test = require('tape');
-const diff = require('sinon-called-with-diff');
-const sinon = diff(require('sinon'));
+const stub = require('@cloudcmd/stub');
 
 const forEachKey = require('../lib/for-each-key');
 
@@ -11,7 +10,7 @@ test('forEachKey: on property', (t) => {
         a: 'hello',
     };
     
-    const fn = sinon.stub();
+    const fn = stub();
     
     forEachKey(fn, obj);
     
@@ -25,7 +24,7 @@ test('forEachKey: a couple properties', (t) => {
         b: 'world',
     };
     
-    const fn = sinon.stub();
+    const fn = stub();
     
     forEachKey(fn, obj);
     
@@ -40,7 +39,7 @@ test('forEachKey: count', (t) => {
         c: 'some',
     };
     
-    const fn = sinon.stub();
+    const fn = stub();
     
     forEachKey(fn, obj);
     

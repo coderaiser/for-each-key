@@ -34,6 +34,7 @@
   },
   "homepage": "https://github.com/coderaiser/for-each-key",
   "devDependencies": {
+    "@cloudcmd/stub": "^2.2.0",
     "babel-cli": "^6.1.1",
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-object-entries": "^1.0.0",
@@ -44,8 +45,6 @@
     "nyc": "^11.0.2",
     "redrun": "^6.0.0",
     "rimraf": "^2.4.3",
-    "sinon": "^6.0.0",
-    "sinon-called-with-diff": "^2.0.0",
     "tape": "^4.2.0"
   }
 }
