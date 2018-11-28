@@ -36,7 +36,6 @@
   "devDependencies": {
     "@cloudcmd/stub": "^2.2.0",
     "babel-cli": "^6.1.1",
-    "babel-loader": "^7.0.0",
     "babel-plugin-transform-object-entries": "^1.0.0",
     "babel-preset-env": "^1.6.1",
     "coveralls": "^3.0.0",
