@@ -20,14 +20,6 @@ forEachKey(console.log, {
 'hello world'
 ```
 
-## Environments
-
-In old `node.js` environments that not fully supports `es2015`, `for-each-key` could be used with:
-
-```js
-var forEachKey = require('for-each-key/legacy');
-```
-
 ## License
 
 MIT

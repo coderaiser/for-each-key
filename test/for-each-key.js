@@ -1,6 +1,6 @@
 'use strict';
 
-const test = require('tape');
+const test = require('supertape');
 const stub = require('@cloudcmd/stub');
 
 const forEachKey = require('../lib/for-each-key');

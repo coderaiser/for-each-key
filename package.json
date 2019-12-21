@@ -4,19 +4,16 @@
   "description": "call a function with key and value for each object property",
   "main": "lib/for-each-key.js",
   "scripts": {
-    "test": "tape test/*.js",
-    "coverage": "nyc npm test",
-    "report": "nyc report --reporter=text-lcov | coveralls",
-    "lint": "eslint lib test",
-    "build": "redrun clean 6to5 legacy:*",
-    "6to5": "babel -d legacy/lib lib",
-    "clean": "rimraf dist/* legacy/*",
-    "watcher": "nodemon -w test -w lib --exec",
-    "watch:test": "npm run watcher -- npm test",
-    "watch:lint": "npm run watcher -- 'npm run lint'",
-    "watch:tape": "nodemon -w test -w lib --exec tape",
-    "watch:coverage": "npm run watcher -- nyc tape",
-    "legacy:index": "echo \"module.exports = require('./lib/for-each-key');\" > legacy/index.js"
+    "test": "madrun test",
+    "coverage": "madrun coverage",
+    "report": "madrun report",
+    "lint": "madrun lint",
+    "fix:lint": "madrun fix:lint",
+    "watcher": "madrun watcher",
+    "watch:test": "madrun watch:test",
+    "watch:lint": "madrun watch:lint",
+    "watch:tape": "madrun watch:tape",
+    "watch:coverage": "madrun watch:coverage"
   },
   "repository": {
     "type": "git",
@@ -32,18 +29,20 @@
   "bugs": {
     "url": "https://github.com/coderaiser/for-each-key/issues"
   },
+  "engines": {
+    "node": ">=4"
+  },
   "homepage": "https://github.com/coderaiser/for-each-key",
   "devDependencies": {
     "@cloudcmd/stub": "^2.2.0",
-    "babel-cli": "^6.1.1",
-    "babel-plugin-transform-object-entries": "^1.0.0",
-    "babel-preset-env": "^1.6.1",
     "coveralls": "^3.0.0",
     "eslint": "^5.0.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-putout": "^3.0.0",
+    "madrun": "^5.3.0",
     "nodemon": "^1.11.0",
     "nyc": "^13.1.0",
-    "redrun": "^7.0.3",
-    "rimraf": "^2.4.3",
-    "tape": "^4.2.0"
+    "putout": "^7.3.3",
+    "supertape": "^1.2.4"
   }
 }
